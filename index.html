@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="loginPage" class="center">
+  <h2>Login</h2>
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- MAIN APP -->
+<div id="app">
+
+  <!-- Navbar -->
+  <nav>
+    <h2>EventHub</h2>
+    <input type="text" id="search" placeholder="Search events..." onkeyup="searchEvent()">
+    <div>
+      <button onclick="showBookings()">My Bookings</button>
+      <button onclick="showCreate()">+ Event</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <!-- CREATE EVENT -->
+  <div id="createForm" class="form">
+    <h3>Create Event</h3>
+    <input id="title" placeholder="Title">
+    <input id="date" type="date">
+    <input id="location" placeholder="Location">
+    <input id="image" placeholder="Image name (e.g. concert.jpg)">
+    <textarea id="desc" placeholder="Description"></textarea>
+    <button onclick="addEvent()">Add Event</button>
+  </div>
+
+  <!-- EVENTS -->
+  <div id="events" class="grid"></div>
+
+  <!-- BOOKINGS -->
+  <div id="bookings" class="grid"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
